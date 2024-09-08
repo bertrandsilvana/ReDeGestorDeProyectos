@@ -12,7 +12,7 @@ class GestorDeProyecto {
     private $comentarios = [];
     private $estados = [];
 
-    // Métodos para gestionar usuarios
+
     public function agregarUsuario($usuario) {
         $this->usuarios[] = $usuario;
     }
@@ -35,14 +35,14 @@ class GestorDeProyecto {
     }
 
     public function eliminarUsuario($id_usuario) {
-        foreach ($this->usuarios as $key => $usuario) {
+        foreach ($this->usuarios as $index => $usuario) {
             if ($usuario->getIdUsuario() == $id_usuario) {
-                unset($this->usuarios[$key]);
+                unset($this->usuarios[$index]);
             }
         }
     }
 
-    // Métodos para gestionar proyectos
+
     public function agregarProyecto($proyecto) {
         $this->proyectos[] = $proyecto;
     }
@@ -65,14 +65,14 @@ class GestorDeProyecto {
     }
 
     public function eliminarProyecto($id_proyecto) {
-        foreach ($this->proyectos as $key => $proyecto) {
+        foreach ($this->proyectos as $index => $proyecto) {
             if ($proyecto->getIdProyecto() == $id_proyecto) {
                 unset($this->proyectos[$key]);
             }
         }
     }
 
-    // Métodos para gestionar tareas
+    
     public function agregarTarea($tarea) {
         $this->tareas[] = $tarea;
     }
@@ -100,14 +100,14 @@ class GestorDeProyecto {
     }
 
     public function eliminarTarea($id_tarea) {
-        foreach ($this->tareas as $key => $tarea) {
+        foreach ($this->tareas as $index => $tarea) {
             if ($tarea->getIdTarea() == $id_tarea) {
-                unset($this->tareas[$key]);
+                unset($this->tareas[$index]);
             }
         }
     }
 
-    // Métodos para gestionar comentarios
+    
     public function agregarComentario($comentario) {
         $this->comentarios[] = $comentario;
     }
@@ -130,14 +130,14 @@ class GestorDeProyecto {
     }
 
     public function eliminarComentario($id_comentario) {
-        foreach ($this->comentarios as $key => $comentario) {
+        foreach ($this->comentarios as $index => $comentario) {
             if ($comentario->getIdComentario() == $id_comentario) {
-                unset($this->comentarios[$key]);
+                unset($this->comentarios[$index]);
             }
         }
     }
 
-    // Métodos para gestionar estados
+    
     public function agregarEstado($estado) {
         $this->estados[] = $estado;
     }
@@ -159,9 +159,9 @@ class GestorDeProyecto {
     }
 
     public function eliminarEstado($id_estado) {
-        foreach ($this->estados as $key => $estado) {
+        foreach ($this->estados as $index => $estado) {
             if ($estado->getIdEstado() == $id_estado) {
-                unset($this->estados[$key]);
+                unset($this->estados[$index]);
             }
         }
     }
