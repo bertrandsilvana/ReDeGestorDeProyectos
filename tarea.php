@@ -89,15 +89,4 @@ class Tarea {
         $this->id_estado = $id_estado;
     }
 
-    public function agregarTarea() {
-        // Código para agregar tarea
-    }
-
-    public function eliminarTarea() {
-        // Código para eliminar tarea
-    }
-
-    public function editarTarea() {
-        // Código para editar tarea
-    }
 }
