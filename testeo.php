@@ -6,7 +6,7 @@ require_once 'comentario.php';
 require_once 'estado.php';
 require_once 'GestorDeProyecto.php';
 
-// Crear instancias de las clases
+
 $gestor = new GestorDeProyecto();
 
 // Crear y agregar usuarios
@@ -27,35 +27,35 @@ $gestor->agregarEstado($estado1);
 $gestor->agregarEstado($estado2);
 $gestor->agregarEstado($estado3);
 
-// Crear y agregar tareas
+// agregamos tareas
 $tarea1 = new Tarea(1, 'Tarea 1', 'Descripción de la Tarea 1', '2024-09-01', '2024-09-10', 1, 1, 1);
 $tarea2 = new Tarea(2, 'Tarea 2', 'Descripción de la Tarea 2', '2024-09-05', '2024-09-15', 1, 2, 2);
 $gestor->agregarTarea($tarea1);
 $gestor->agregarTarea($tarea2);
 
-// Crear y agregar comentarios
+// agregamos comentarios
 $comentario1 = new Comentario(1, 1, 1, 'Este es un comentario sobre la Tarea 1', '2024-09-01');
 $gestor->agregarComentario($comentario1);
 
-// Mostrar información de usuarios
+//Usuarios
 echo "Usuarios:\n";
 foreach ($gestor->usuarios as $usuario) {
     echo "ID: " . $usuario->getIdUsuario() . ", Nombre: " . $usuario->getNombre() . ", Email: " . $usuario->getEmail() . "\n";
 }
 
-// Mostrar información de proyectos
+// Proyectos
 echo "\nProyectos:\n";
 foreach ($gestor->proyectos as $proyecto) {
     echo "ID: " . $proyecto->getIdProyecto() . ", Nombre: " . $proyecto->getNombre() . ", Descripción: " . $proyecto->getDescripcion() . "\n";
 }
 
-// Mostrar información de tareas
+// TAREAS
 echo "\nTareas:\n";
 foreach ($gestor->tareas as $tarea) {
     echo "ID: " . $tarea->getIdTarea() . ", Nombre: " . $tarea->getNombre() . ", Descripción: " . $tarea->getDescripcion() . ", Fecha Inicio: " . $tarea->getFechaInicio() . ", Fecha Fin: " . $tarea->getFechaFin() . ", ID Proyecto: " . $tarea->getIdProyecto() . ", ID Usuario: " . $tarea->getIdUsuario() . ", ID Estado: " . $tarea->getIdEstado() . "\n";
 }
 
-// Mostrar información de comentarios
+// COMENTARIOS
 echo "\nComentarios:\n";
 foreach ($gestor->comentarios as $comentario) {
     echo "ID: " . $comentario->getIdComentario() . ", ID Tarea: " . $comentario->getIdTarea() . ", ID Usuario: " . $comentario->getIdUsuario() . ", Contenido: " . $comentario->getContenido() . ", Fecha: " . $comentario->getFecha() . "\n";
