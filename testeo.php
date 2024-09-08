@@ -9,17 +9,17 @@ require_once 'GestorDeProyecto.php';
 
 $gestor = new GestorDeProyecto();
 
-// Crear y agregar usuarios
+// usuarios
 $usuario1 = new Usuario(1, 'Juan Perez', 'juan@example.com');
 $usuario2 = new Usuario(2, 'Maria Lopez', 'maria@example.com');
 $gestor->agregarUsuario($usuario1);
 $gestor->agregarUsuario($usuario2);
 
-// Crear y agregar proyectos
+// proyectos
 $proyecto1 = new Proyecto(1, 'Proyecto A', 'Descripción del Proyecto A');
 $gestor->agregarProyecto($proyecto1);
 
-// Crear y agregar estados
+// estados
 $estado1 = new Estado(1, 'Pendiente');
 $estado2 = new Estado(2, 'En Progreso');
 $estado3 = new Estado(3, 'Completado');
