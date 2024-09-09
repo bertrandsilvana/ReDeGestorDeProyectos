@@ -10,8 +10,8 @@ require_once 'GestorDeProyecto.php';
 $gestor = new GestorDeProyecto();
 
 // usuarios
-$usuario1 = new Usuario(1, 'Juan Perez', 'juan@example.com');
-$usuario2 = new Usuario(2, 'Maria Lopez', 'maria@example.com');
+$usuario1 = new Usuario(1, 'Juan Perez', 'juan@gmail.com');
+$usuario2 = new Usuario(2, 'Maria Lopez', 'maria@hahoo.com');
 $gestor->agregarUsuario($usuario1);
 $gestor->agregarUsuario($usuario2);
 
