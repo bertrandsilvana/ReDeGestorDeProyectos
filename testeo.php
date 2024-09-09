@@ -40,6 +40,6 @@ $gestor->agregarComentario($comentario1);
 //Usuarios
 echo "Usuarios:\n";
 foreach ($gestor->usuarios as $usuario) {
-    echo "ID: " . $usuario->getIdUsuario() . ", Nombre: " . $usuario->getNombre() . ", Email: " . $usuario->getEmail() . "\n";
+   echo "ID: " . $usuario->getIdUsuario() . ", Nombre: " . $usuario->getNombre() . ", Email: " . $usuario->getEmail() . "\n";
 }
 
