@@ -67,7 +67,7 @@ class GestorDeProyecto {
     public function eliminarProyecto($id_proyecto) {
         foreach ($this->proyectos as $index => $proyecto) {
             if ($proyecto->getIdProyecto() == $id_proyecto) {
-                unset($this->proyectos[$key]);
+                unset($this->proyectos[$index]);
             }
         }
     }
