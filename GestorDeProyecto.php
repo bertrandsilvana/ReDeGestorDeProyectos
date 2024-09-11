@@ -6,8 +6,8 @@ require_once 'comentario.php';
 require_once 'estado.php';
 
 class GestorDeProyecto {
-    private $usuarios = [];
-    private $proyectos = [];
+    public $usuarios = [];
+    public $proyectos = [];
     private $tareas = [];
     private $comentarios = [];
     private $estados = [];
@@ -36,7 +36,7 @@ class GestorDeProyecto {
 
     public function eliminarUsuario($id_usuario) {
         foreach ($this->usuarios as $index => $usuario) {
-            if ($usuario->getIdUsuario() == $id_usuario) {
+            if ($usuario->getIdUsuario () == $id_usuario) {
                 unset($this->usuarios[$index]);
             }
         }

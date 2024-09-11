@@ -42,4 +42,8 @@ echo "Usuarios:\n";
 foreach ($gestor->usuarios as $usuario) {
    echo "ID: " . $usuario->getIdUsuario() . ", Nombre: " . $usuario->getNombre() . ", Email: " . $usuario->getEmail() . "\n";
 }
-
+// Proyectos
+echo "\nProyectos:\n";
+foreach ($gestor->proyectos as $proyecto) {
+    echo "ID: " . $proyecto->getIdProyecto() . ", Nombre: " . $proyecto->getNombre() . ", Descripción: " . $proyecto->getDescripcion() . "\n";
+}
